@@ -1,0 +1,40 @@
+drop table  registros_entrada 
+create table registros_entrada (
+	codigo_registro int not null,
+	cedula_empleado varchar (10) not null,
+	fecha date not null,
+	hora time not null,
+	constraint regitso_entrada_pk primary key (codigo_registro)
+);
+
+insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
+values (1,'1234567891','01/01/1991','07:00');
+
+insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
+values (2,'1234567892','01/01/1992','07:05');
+
+insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
+values (3,'1234567893','01/01/1993','07:10');
+
+insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
+values (4,'1234567894','01/01/1994','07:30');
+
+insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
+values (5,'1234567895','01/01/1995','06:30');
+
+insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
+values (6,'1234567896','01/01/1996','07:00');
+
+insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
+values (7,'1234567897','01/01/1997','09:00');
+
+insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
+values (8,'1234567898','01/01/1998','08:00');
+
+insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
+values (9,'1234567899','01/01/1999','07:01');
+
+insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
+values (10,'1234567810','01/01/1910','23:00');
+
+select * from registros_entrada;
