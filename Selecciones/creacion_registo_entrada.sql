@@ -37,11 +37,12 @@ values (9,'1234567899','01/01/1999','07:01');
 insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
 values (10,'1234567810','01/01/1910','23:00');
 
-select * from registros_entrada where cedula_empleado  like '1%';
+select * from registros_entrada;
 -- like solo se una con text o varchar 
 --between  '01/01/1995' and '01/01/1999' ayuda a buscar un rango de edad es decir entre dos fechas 
-select * from registros_entrada where cedula_empleado  is null;
---busca en la tabla registros null o q no sean null
 
-select * from registros_entrada where cedula_empleado  !='1234567898';
--- me trae el registo que no sea igual al que digitamos pero siempre que tenga un valor
+select cedula_empleado , fecha, hora from registros_entrada;
+
+select * from registros_entrada where hora  >='07:00' and hora <='14:00';
+
+select * from registros_entrada where hora  >'08:00';
