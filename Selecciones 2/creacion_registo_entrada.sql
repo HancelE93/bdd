@@ -88,18 +88,30 @@ values (15,'1734567810','01/08/1910','22:00');
 insert into registros_entrada (codigo_registro, cedula_empleado , fecha, hora)
 values (17,'1034567810','01/06/1910','22:00');
 
+insert into registros_entrada (codigo_registro, cedula_empleado, fecha, hora)
+values (20000, '1759999999', '2023-08-05', '09:00');
+
+insert into registros_entrada (codigo_registro, cedula_empleado, fecha, hora)
+values (20001, '0811111111', '2023-09-10', '10:00');
+
 select * from registros_entrada;
--- like solo se una con text o varchar 
---between  '01/01/1995' and '01/01/1999' ayuda a buscar un rango de edad es decir entre dos fechas 
 
-select cedula_empleado , fecha, hora from registros_entrada;
+select * from registros_entrada where extract(month from fecha)= 7 or cedula_empleado like '17%';
 
-select * from registros_entrada where hora  >='07:00' and hora <='14:00';
+select * from registros_entrada where extract(month from fecha)= 6 or cedula_empleado like '17%' and hora between '8:00' and '12:00';
 
-select * from registros_entrada where hora  >'08:00';
+select *
+from registros_entrada
+where 
+(
+    extract(month from fecha) = 8
+    and cedula_empleado like '17%'
+    and hora between '08:00' and '12:00'
+)
+or
+(
+    extract(month from fecha) = 9
+    and cedula_empleado like '08%'
+    and hora between '09:00' and '13:00'
+);
 
-update registros_entrada set cedula_empleado = '082345679' WHERE EXTRACT(MONTH FROM fecha) = 8;
---EXTRACT(MONTH FROM fecha) → extrae el número del mes de la columna fecha.
---= 8 → filtra solo las filas con mes de agosto.
-
-delete from registros_entrada WHERE EXTRACT(MONTH FROM fecha) = 06;

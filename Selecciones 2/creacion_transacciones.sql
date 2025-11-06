@@ -98,16 +98,15 @@ values (18,'17350',1000.0,'C','01/08/2025','13:59');
 
 select * from transacciones;
 
-select * from transacciones where tipo like 'D%'
+select * from transacciones where tipo = 'C' and numero_cuenta between '222001' and '22010';
 
-select * from transacciones where monto between money(200) and money(2000);
+select * from transacciones where tipo = 'D' and
+(extract (day from fecha) = 25 and extract (month from fecha)=5) and 
+numero_cuenta between '22007' and '22010'; 
 
-select codigo,monto,tipo,fecha from transacciones where fecha is not null;
+select * from transacciones where codigo between 1 and 5 and numero_cuenta between '22002' and '22004' and
+(extract ( day from fecha )=26  or extract ( day from fecha )=29 and  extract ( month from fecha )=5);  
 
-update transacciones set tipo= 'T'
-where monto between money (100) and money(500) and 
-EXTRACT(MONTH FROM fecha) = 9 and
-hora between'14:00'and '20:00';
 
-delete from transacciones  where hora between '14:00' and '16:00' and extract (month from fecha)=8 and extract (year from fecha)=2025;
+
 

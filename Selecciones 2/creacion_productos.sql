@@ -57,17 +57,17 @@ VALUES (7, 'Papa', 0.65, 0);
 INSERT INTO productos (codigo, nombre, precio, stock)
 VALUES (8, 'Carne', 3.75, 5);
 
-select codigo, nombre, descripcion, precio, stock  from productos;
+select *  from productos;
 
-select * from productos  where nombre like 'Q%' ;
+select * from productos where stock = 10 and  precio < money (10);
 
-select * from productos  where descripcion  is null ;
+select nombre, stock from productos where nombre like '%m%' or descripcion  like '% %';
 
-select * from productos  where precio between money(2) and money(3);
+select nombre from productos where descripcion is null or stock = 0;
 
-update productos set stock = 0 where descripcion is null;
 
-delete from productos where descripcion is null;
+
+
 
 
 

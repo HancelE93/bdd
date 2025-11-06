@@ -74,13 +74,8 @@ values ('1734500005','Andres','Lua','andresss@gmail.com','01/05/1998');
 
 select * from estudiantes;
 
-select cedula, nombre from estudiantes;
+select nombre, apellido from estudiantes where nombre like 'M%' or apellido like '%Z';
 
-select nombre from estudiantes where cedula like '17%' ;
+select nombre from estudiantes where cedula like '%32%'and cedula like '18%';
 
-select nombre,apellido from estudiantes where nombre like 'A%' ;
-
-update estudiantes set apellido = 'Hernandez' where cedula like '17%';
-
-delete from estudiantes where cedula like '%05'
-
+select nombre, apellido from estudiantes where cedula like '%06' or cedula like '17%';

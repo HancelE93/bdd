@@ -84,10 +84,14 @@ VALUES ('18', '17315', '2025/01/03', 14000.0);
 INSERT INTO cuentas (numero_cuenta, cedula_propietario, fecha_creacion, saldo)
 VALUES ('19', '10315', '2025/05/03', 1400.0);
 
-SELECT fecha_creacion FROM cuentas where fecha_creacion  <='2025/11/03' and fecha_creacion >='2025/09/03';
+SELECT * FROM cuentas;
 
-SELECT numero_cuenta,saldo FROM cuentas where fecha_creacion  <='2025/11/03' and fecha_creacion >='2025/09/03';
+select numero_cuenta, saldo from cuentas where saldo > money(100) and saldo < money(1000);
 
-update cuentas set saldo = 10 where cedula_propietario like '17%';
+select * from cuentas WHERE fecha_creacion BETWEEN CURRENT_DATE - INTERVAL '1 year' AND CURRENT_DATE;
+--CURRENT_DATE → La fecha de hoy. Por ejemplo, si hoy es 2025-11-05.
+--CURRENT_DATE - INTERVAL '1 year' → La fecha de hace un año desde hoy, por ejemplo 2024-11-05.
+select * from cuentas where saldo = money(0) or cedula_propietario like '%2';
 
-delete from cuentas where cedula_propietario like '10%';
+
+
