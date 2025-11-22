@@ -10,6 +10,17 @@ create table prestamo (
 	garante varchar(400),
 	constraint prestamo_pk primary key (cedula)
 )
+UPDATE personas SET numero_hijos = 2 WHERE cedula = '1714616123';
+UPDATE personas SET numero_hijos = 0 WHERE cedula = '1723439319';
+UPDATE personas SET numero_hijos = 1 WHERE cedula = '1723439318';
+UPDATE personas SET numero_hijos = 3 WHERE cedula = '1723439317';
+UPDATE personas SET numero_hijos = 2 WHERE cedula = '1723439316';
+UPDATE personas SET numero_hijos = 4 WHERE cedula = '1723439315';
+UPDATE personas SET numero_hijos = 1 WHERE cedula = '1723439314';
+UPDATE personas SET numero_hijos = 5 WHERE cedula = '1723439313';
+UPDATE personas SET numero_hijos = 0 WHERE cedula = '1723439312';
+UPDATE personas SET numero_hijos = 3 WHERE cedula = '1723439311';
+
 update prestamo -- agregamps un garante o es decir se pude modificar la celda null
 set garante = case cedula
     when '1714616123' then 'Carlos S.'

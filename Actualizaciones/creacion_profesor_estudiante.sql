@@ -34,6 +34,7 @@ values (1735954804,'Paula','Noguera','Paul5@gmail.com','22/07/2005',03);
 insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
 values (1349879545,'Marcela','Ramos','MaroR72@gmail.com','15/08/2001',04);
 
+
 alter table  estudiantes
 add constraint Profesores_fk 
 foreign key (codigo_profesor)

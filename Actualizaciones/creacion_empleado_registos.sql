@@ -53,6 +53,16 @@ insert into empleado(codigo_empleado, nombre, fecha, hora)
 values(8795, 'Hancel','19/09/2023','08:00');
 insert into empleado(codigo_empleado, nombre, fecha, hora)
 values(5258, 'Hancel','19/09/2023','08:00');
+---cambiar dato de una celda 
+UPDATE empleado SET nombre = 'Luis'     WHERE codigo_empleado = 1545;
+UPDATE empleado SET nombre = 'Andrea'   WHERE codigo_empleado = 5447;
+UPDATE empleado SET nombre = 'Sofía'    WHERE codigo_empleado = 8454;
+UPDATE empleado SET nombre = 'Diego'    WHERE codigo_empleado = 4555;
+UPDATE empleado SET nombre = 'Marta'    WHERE codigo_empleado = 7894;
+UPDATE empleado SET nombre = 'Jorge'    WHERE codigo_empleado = 1257;
+UPDATE empleado SET nombre = 'Paula'    WHERE codigo_empleado = 9632;
+UPDATE empleado SET nombre = 'Fernando' WHERE codigo_empleado = 8795;
+UPDATE empleado SET nombre = 'Lucía'    WHERE codigo_empleado = 5258;
 
 
 ALTER TABLE registros_entrada
